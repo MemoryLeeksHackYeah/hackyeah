@@ -3,11 +3,11 @@ build {
 
   provisioner "shell" {
     execute_command = "echo 'packer' | sudo -S env {{ .Vars }} {{ .Path }}"
-    script          = "resources/install.sh"
+    script          = "${path.root}/resources/install.sh"
   }
 
   provisioner "file" {
-    source      = "resources/temp.txt"
+    source      = "${path.root}/resources/temp.txt"
     destination = "/apps/temp.txt"
   }
 }
