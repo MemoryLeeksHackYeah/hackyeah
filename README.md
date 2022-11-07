@@ -20,3 +20,13 @@ sudo apt update && sudo apt install packer && sudo apt install terraform
 2. Run command ```gcloud auth application-default login``` and provide your Google credentials
 
 
+### Usage
+
+Replace ``<REPO_PATH>`` in command 
+```
+gcloud secrets versions access latest --secret=appuser-ssh-key  --format='get(payload.data)' | tr '_-' '/+' | base64 -d > <REPO_PATH>/infrastructure/packer/resources/appuser_id_rsa
+```
+and run it. After that you are able to run scripts:
+- ``deploy.sh`` to deploy current state of your local repository to GCP
+- ``destroy.sh`` to destroy everything created in GCP ()
+
