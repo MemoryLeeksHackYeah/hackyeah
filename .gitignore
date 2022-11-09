@@ -2,4 +2,4 @@
 .terraform*
 .packer*
 
-infrastructure/packer/resources/appuser_id_rsa
+infrastructure/packer/common/appuser_id_rsa
