@@ -2,7 +2,10 @@
 set -e
 
 PACKER_DIR=infrastructure/packer
-packer build $PACKER_DIR
+if [[ $1 == "all" ]]; then
+  packer build $PACKER_DIR/base-img
+fi
+packer build $PACKER_DIR/app-img
 
 TERRAFORM_DIR=infrastructure/terraform
 terraform -chdir=$TERRAFORM_DIR init --reconfigure
