@@ -1,5 +1,7 @@
 .idea*
 .terraform*
 .packer*
+__pycache__
+venv/
 
 infrastructure/packer/common/appuser_id_rsa
