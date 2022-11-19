@@ -1,0 +1,53 @@
+{% extends "app/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    <div id="fleet_main">
+        
+        <br>
+        <h2>Fleet search</h2>
+        <hr>
+
+        <div id="fleet-form">
+            <form action="{% url 'fleet' %}" method="post">
+                {% csrf_token %}
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputID">ID</label>
+                      <input type="number" class="form-control" id="id_fleet" placeholder="Registration Number">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputWaste">Waste</label>
+                      <input type="text" class="form-control" id="waste_fleet" placeholder="Waste">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputID">City</label>
+                      <input type="text" class="form-control" id="city_fleet" placeholder="Input city">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputWaste">Waste</label>
+                      <input type="text" class="form-control" id="waste_fleet" placeholder="Waste">
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Search</button>
+
+            </form>
+        </div>
+
+        <div id="fleet_search">
+
+        </div>
+
+        <div>
+            <a href="{% url 'index' %}" class="btn btn-link">Return to main page</a>
+        </div>
+
+    </div>
+    
+{% endblock %}
