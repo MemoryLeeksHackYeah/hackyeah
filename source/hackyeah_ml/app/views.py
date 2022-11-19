@@ -20,6 +20,7 @@ def maps(request):
     return HttpResponse(response.content)
 
 def weight(request):
+    collector.update_remote_hubs_data()
     return HttpResponse(json.dumps(collector.remote_hubs_data))
 
 def init():
