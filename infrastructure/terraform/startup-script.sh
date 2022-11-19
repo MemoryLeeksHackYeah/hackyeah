@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Prerequisites
+gcloud secrets versions access latest --secret=google_maps_api  --format='get(payload.data)' | tr '_-' '/+' | base64 -d > /apps/hackyeah_ml/config/google_maps_api_key
+
+# Running application
 python3.8 -m venv venv
 
 source venv/bin/activate

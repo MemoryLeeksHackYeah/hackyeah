@@ -25,6 +25,7 @@ sudo apt update && sudo apt install packer && sudo apt install terraform
 Replace ``<REPO_PATH>`` in command 
 ```
 gcloud secrets versions access latest --secret=appuser-ssh-key  --format='get(payload.data)' | tr '_-' '/+' | base64 -d > <REPO_PATH>/infrastructure/packer/resources/appuser_id_rsa
+gcloud secrets versions access latest --secret=google_maps_api  --format='get(payload.data)' | tr '_-' '/+' | base64 -d > <REPO_PATH>/source/hackyeah_ml/config/google_maps_api_key
 ```
 and run it. After that you are able to run scripts:
 - ``deploy.sh`` to deploy current state of your local repository to GCP
