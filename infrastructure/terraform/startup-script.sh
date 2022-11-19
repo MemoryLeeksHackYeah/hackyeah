@@ -6,4 +6,8 @@ source venv/bin/activate
 
 pip install --upgrade pip
 pip install -r /apps/hackyeah_ml/requirements.txt
+
+export GOOGLE_CLOUD_PROJECT="memory-leeks-hackyeah"
+export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/application_default_credentials.json
+
 python /apps/hackyeah_ml/manage.py runserver 0.0.0.0:8080
