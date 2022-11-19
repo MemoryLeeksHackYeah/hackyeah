@@ -1,9 +1,13 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 from django.conf import settings
 import requests
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the app index.")
+    return render(request, "app/index.html")
+
+def fleet(request):
+    return render(request, "app/fleet.html")
 
 def maps(request):
     with open(settings.GOOGLE_MAPS_API_KEY, 'r') as f:

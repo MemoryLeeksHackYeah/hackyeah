@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class RemoteHub(models.Model):
     id = models.IntegerField(primary_key=True)
     disposal_service_company_ID = models.IntegerField() # Change later to foreign key
