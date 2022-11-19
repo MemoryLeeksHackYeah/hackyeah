@@ -1,0 +1,36 @@
+#main_div, #fleet_main {
+    border: none;
+    margin: 10% 10% 10% 10%;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(254, 254, 254);
+    border-radius: 5px;
+}
+
+form {
+    margin: 10px;
+    padding: 10%;
+}
+
+#main_div > a {
+    border: none #ffffff; 
+    box-shadow: 2px 2px 2px 2px #c6c8ca; 
+    border-radius: 6px;
+    padding: 10px;
+    margin: 15px 15px 15px 0px;
+}
+
+#fleet_search {
+    padding: 10px;
+    margin: 5px;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+.navbar {
+    text-align: center;
+}
+
+body {
+    background-color: #86b959;
+}
