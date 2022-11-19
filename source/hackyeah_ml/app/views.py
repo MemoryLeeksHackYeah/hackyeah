@@ -21,11 +21,6 @@ def fleet(request):
             })
 
     return render(request, "app/fleet.html")
-def maps(request):
-    with open(settings.GOOGLE_MAPS_API_KEY, 'r') as f:
-        google_maps_api_key = f.read()
-    response = requests.get('https://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal&key=' + google_maps_api_key)
-    return HttpResponse(response.content)
 
 def weight(request):
     return HttpResponse(json.dumps(collector.remote_hubs_data))
