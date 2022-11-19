@@ -10,7 +10,7 @@ urlpatterns = [
     path("register", views.register, name="register"),
 
     #Subtabs
-    path('fleet', views.fleet, name="fleet")
+    path('fleet', views.fleet, name="fleet"),
 
     path('maps', views.maps, name='maps')
 ]
