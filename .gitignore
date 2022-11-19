@@ -3,5 +3,6 @@
 .packer*
 __pycache__
 venv/
+google_maps_api_key
 
 infrastructure/packer/common/appuser_id_rsa
