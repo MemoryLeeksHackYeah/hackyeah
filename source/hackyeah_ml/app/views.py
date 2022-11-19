@@ -60,4 +60,10 @@ def register(request):
         return render(request, "app/register.html")
 
 def fleet(request):
+
+    if request.method == "POST":
+        return render(request, "app/fleet.html", {
+                "data": "Passwords must match."
+            })
+
     return render(request, "app/fleet.html")

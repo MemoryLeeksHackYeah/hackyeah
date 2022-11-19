@@ -40,9 +40,11 @@
             </form>
         </div>
 
-        <div id="fleet_search">
-
-        </div>
+        {% if data %}
+          <div id="fleet_search">
+              {{ data }}
+          </div>
+        {% endif %}
 
         <div>
             <a href="{% url 'index' %}" class="btn btn-link">Return to main page</a>
