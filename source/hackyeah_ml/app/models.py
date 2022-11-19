@@ -1,9 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
-
-class User(AbstractUser):
-    def __str__(self):
-       return f"{self.username}"
 
 class RemoteHub(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -31,3 +26,19 @@ class WasteTypeReadiness(models.Model):
     remote_hub_id = models.ForeignKey(RemoteHub, on_delete=models.CASCADE, related_name='remote_hub_id_wtr')
     waste_type_id = models.ForeignKey(WasteType, on_delete=models.CASCADE, related_name='waste_type_id_wtr')
     ready_to_be_thrown = models.BooleanField(default=False)
+
+class DisposalServiceCompanies(models.Model):
+    id = models.IntegerField(primary_key=True)
+    company_name = models.CharField(max_length=225)
+    contact = models.CharField(max_length=225)
+
+class Trucks(models.Model):
+    id = models.IntegerField(primary_key=True)
+    disposal_service_company_id = models.ForeignKey(DisposalServiceCompanies, on_delete=models.CASCADE)
+    availability = models.BooleanField(default=False)
+    registration_number = models.CharField(max_length=10)
+
+class TrucksWasteTypeCapacity(models.Model):
+    truck_id = models.ForeignKey(Trucks, on_delete=models.CASCADE)
+    waste_type_id = models.ForeignKey(WasteType, on_delete=models.CASCADE, related_name='waste_type_id_twtc')
+    capacity_liters = models.IntegerField()
