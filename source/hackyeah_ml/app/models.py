@@ -38,3 +38,8 @@ class Trucks(models.Model):
     disposal_service_company_id = models.ForeignKey(DisposalServiceCompanies, on_delete=models.CASCADE)
     availability = models.BooleanField(default=False)
     registration_number = models.CharField(max_length=10)
+
+class TrucksWasteTypeCapacity(models.Model):
+    truck_id = models.ForeignKey(Trucks, on_delete=models.CASCADE)
+    waste_type_id = models.ForeignKey(WasteType, on_delete=models.CASCADE, related_name='waste_type_id_twtc')
+    capacity_liters = models.IntegerField()
