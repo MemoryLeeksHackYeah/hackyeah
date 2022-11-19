@@ -1,8 +1,6 @@
 from django.http import HttpResponse
 from django.conf import settings
-from django.core.files import File
 import requests
-
 
 def index(request):
     return HttpResponse("Hello, world. You're at the app index.")
