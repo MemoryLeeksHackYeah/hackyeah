@@ -10,27 +10,18 @@
     <body>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand">hackyeah</a>
+            <a href="{% url 'index' %}" class="navbar-brand">Sabre - HackYeah2022</a>
           
             <div>
               <ul class="navbar-nav mr-auto">
-                {% if user.is_authenticated %}
+
                     <li class="nav-item">
-                        <a class="nav-link btn btn-link"><strong id="username">{{ user.username }}</strong></a>
-                    </li>
-                {% endif %}
-                {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="btn btn-link nav-link" href="{% url 'logout' %}">Log Out</a>
-                    </li>
-                {% else %}
-                    <li class="nav-item">
-                        <a class="btn btn-link nav-link" href="{% url 'login' %}">Log In</a>
+                        <a href="{% url 'fleet' %}" class="nav-link btn btn-link">Fleet</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-link nav-link" href="{% url 'register' %}">Register</a>
+                        <a href="" class="btn btn-link nav-link">Hubs/Containers</a>
                     </li>
-                {% endif %}
+
               </ul>
             </div>
           </nav>
@@ -38,6 +29,8 @@
         <div class="body">
             {% block body %}
             {% endblock %}
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWcsYyZTaKRFQM52LpGJkeBZuoeWT2vYM&callback=initMap" defer>
+            </script>
             <script src="{% static 'app/app.js' %}">
             </script>
         </div>
