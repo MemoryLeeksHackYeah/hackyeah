@@ -1,3 +1,21 @@
+//buttons handler
+
+const btn_submit = document.querySelector('#option_submit');        
+const radioButtons = document.querySelectorAll('input[name="options"]');
+
+btn_submit.addEventListener("click", () => {
+    
+    let selectedWaste;
+    for (const radioButton of radioButtons) {
+        if (radioButton.checked) {
+            selectedWaste = radioButton.value;
+            break;
+        }
+    }
+
+    console.log(`click! ${selectedWaste}`)
+});
+
 //Get the data
 
 class MarkerGenerator {
@@ -46,8 +64,10 @@ function initMap() {
     .then(data => {
 
         let pointers = Object.values(data)
-        pointers[0].lat = 50.09869385935164
-        pointers[0].long = 20.043582210370155
+        pointers[0].lat = 50.069063155047395
+        pointers[0].long = 19.990572280177357
+        pointers[0].weights[0].weight *= 500
+        pointers[0].weights[1].weight *= 500
         console.log(pointers)
 
         const typeColorMap = {
@@ -63,6 +83,8 @@ function initMap() {
                 allMarkers[pi] = []
             }
 
+            //pointer.weights.filter()
+            //console.log(pointer.weights[0].type)
             pointer.weights = pointer.weights.sort((scale1, scale2) => scale1.type > scale2.type ? -1:1)
             let markersData = pointer.weights.map(scale => ({color: typeColorMap[scale.type], value: scale.weight/1500}))
 
@@ -88,3 +110,6 @@ function initMap() {
   }
   
   window.initMap = initMap;
+
+
+  

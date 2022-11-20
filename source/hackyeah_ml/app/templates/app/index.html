@@ -3,29 +3,29 @@
 
 {% block body %}
 <div id="main_div">
-
-        <br>
-        <h2>Driveless Routes</h2>
     
-    <hr>
-
     <div id="map">
     </div>
 
-    <div class="btn-group mt-2" data-toggle="buttons">
+    <hr>
+
+    <div class="btn-group mt-3" data-toggle="buttons">
         <label class="btn btm-sm btn-secondary">
-            <input type="radio" name="options" id="option1"> Glass 
+            <input type="radio" value="Glass" name="options" id="option1"> Glass 
         </label>
         <label class="btn btm-sm btn-secondary">
-            <input type="radio" name="options" id="option2"> Paper
+            <input type="radio" value="Paper" name="options" id="option2"> Paper
         </label>
         <label class="btn btm-sm btn-secondary">
-            <input type="radio" name="options" id="option3"> Plastic
+            <input type="radio" value="Plastic"name="options" id="option3"> Plastic
         </label>
         <label class="btn btm-sm btn-secondary">
-            <input type="radio" name="options" id="option4"> Bio
+            <input type="radio" value="Bio" name="options" id="option4"> Bio
         </label>
-        <label class="btn btm-sm btn-success">
+        <label class="btn btm-sm btn-secondary">
+            <input type="radio" value="Mix" name="options" id="option5"> Mix
+        </label>
+        <label class="btn btm-sm btn-success" id="option_submit">
             Set a route >>
         </label>
     </div> 
