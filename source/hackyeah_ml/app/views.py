@@ -1,31 +1,36 @@
-from django.http import HttpResponse, HttpResponseBadRequest
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.conf import settings
 import requests
-from .models import RemoteHub as RealRemoteHub
+from app.logic.remote_hub import RemoteHub as RemoteHubLogic
 from app.models import RemoteHub
 from app.logic.collector import Collector
 import json
 
-
 def index(request):
     return render(request, "app/index.html")
-
 
 def fleet(request):
     return render(request, "app/fleet.html")
 
+def maps(request):
+    return HttpResponse(json.dumps({
+        'start': 'Katowice',
+        'end': 'Krakow',
+        'waypoints': [
+            'Tychy',
+            'Oswiecim'
+        ]
+    }))
 
 def weight(request):
     collector.update_remote_hubs_data()
     return HttpResponse(json.dumps(collector.remote_hubs_data))
 
-
 def init():
     global collector
     collector = Collector(0)
     print(collector)
-
 
 init()
 
@@ -107,7 +112,7 @@ def generate_route_google_api_url(request, waste_type_name):
                          '&waypoints=optimize:true' + '|50.074172,19.918839' + \
                          '&key=' + google_maps_api_key
     print(google_api_request)
-    return HttpResponse(requests.get(google_api_request))
+    return HttpResponse('dupa')
 
 
 def show_route(request):

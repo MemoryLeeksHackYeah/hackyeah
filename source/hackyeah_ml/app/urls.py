@@ -7,6 +7,7 @@ urlpatterns = [
 
     #Subtabs
     path('fleet', views.fleet, name="fleet"),
+    path('maps', views.maps, name="maps"),
 
     path('weight', views.weight, name='weight'),
     path('remote_hubs_map', views.remote_hubs_map, name='remote_hubs_map'),
