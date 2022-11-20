@@ -23,6 +23,7 @@ def fleet(request):
     return render(request, "app/fleet.html")
 
 def weight(request):
+    collector.update_remote_hubs_data()
     return HttpResponse(json.dumps(collector.remote_hubs_data))
 
 def init():
