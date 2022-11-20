@@ -1,10 +1,14 @@
 #main_div, #fleet_main, #truck_page {
     border: none;
-    margin: 5% 20% 10% 20%;
+    margin: 2.5% 20% 10% 20%;
     padding: 10px;
     text-align: center;
     background-color: rgb(254, 254, 254);
     border-radius: 5px;
+}
+
+#main_div {
+    padding-bottom: 2px;
 }
 
 form {
@@ -27,26 +31,6 @@ form {
     border-radius: 5px;
 }
 
-.button_toggles > div, h2 {
-    display: inline;
-}
-
-.button_toggles {
-    margin-right: 1px;
-}
-
-.button_toggles > .btn-group {
-    padding: 0px;
-}
-
-.buttonOption1{
-    text-align: start;
-}
-
-.buttonOption2{
-    text-align: end;
-}
-
 .fleet_data_item {
     border: solid 1px black;
     padding: 5px 5px 5px 5px;
@@ -60,20 +44,6 @@ form {
 
 body {
     background-color: #86b959;
-}
-
-.map-responsive{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
-}
-.map-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
 }
 
 #map {
