@@ -84,4 +84,8 @@ def show_route_for_waste_type_name(request, waste_type_name):
                 points_to_make_a_route.append(point)
         return HttpResponse(points_to_make_a_route)
 
+# def generate_
+
+def show_route(request):
+    return render(request, "app/show_route.html")
 
