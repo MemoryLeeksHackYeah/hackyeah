@@ -4,17 +4,25 @@
 {% block body %}
 <div id="main_div">
 
-    <br>
-    <h2>appName</h2>
+    <div class="button_toggles form-row">
+        <br>
+        <div class="form-group col-md-6 buttonOption1" ><h2>Driveless Routes</h2></div>
+        <div class="btn-group form-group col-md-6 buttonOption2" data-toggle="buttons">
+            <label class="btn btm-sm btn-secondary">
+                <input type="radio" name="options" id="option1"> Glass
+            </label>
+            <label class="btn btm-sm btn-secondary">
+                <input type="radio" name="options" id="option2"> Paper
+            </label>
+        </div> 
+    </div>
+    
     <hr>
 
-	<!-- <div class="map-responsive">
-        <iframe src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"></iframe>
-	</div> -->
-
     <div id="map">
-
     </div>
+
+    <div><button class="btn btn-secondary btn-sm mt-2">Set a route</button></div>
 
 
 </div>

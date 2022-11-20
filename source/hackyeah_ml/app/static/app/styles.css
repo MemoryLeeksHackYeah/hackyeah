@@ -1,6 +1,6 @@
 #main_div, #fleet_main, #truck_page {
     border: none;
-    margin: 10% 10% 10% 10%;
+    margin: 5% 20% 10% 20%;
     padding: 10px;
     text-align: center;
     background-color: rgb(254, 254, 254);
@@ -25,6 +25,26 @@ form {
     margin: 5px;
     border: solid 1px black;
     border-radius: 5px;
+}
+
+.button_toggles > div, h2 {
+    display: inline;
+}
+
+.button_toggles {
+    margin-right: 1px;
+}
+
+.button_toggles > .btn-group {
+    padding: 0px;
+}
+
+.buttonOption1{
+    text-align: start;
+}
+
+.buttonOption2{
+    text-align: end;
 }
 
 .fleet_data_item {
