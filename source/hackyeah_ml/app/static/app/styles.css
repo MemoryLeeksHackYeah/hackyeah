@@ -1,6 +1,6 @@
-#main_div, #fleet_main {
+#main_div, #fleet_main, #truck_page {
     border: none;
-    margin: 10% 10% 10% 10%;
+    margin: 0.5% 0.5% 0 0.5%;
     padding: 10px;
     text-align: center;
     background-color: rgb(254, 254, 254);
@@ -27,6 +27,13 @@ form {
     border-radius: 5px;
 }
 
+.fleet_data_item {
+    border: solid 1px black;
+    padding: 5px 5px 5px 5px;
+    margin: 5px;
+    text-align: left;
+}
+
 .navbar {
     text-align: center;
 }
@@ -34,3 +41,10 @@ form {
 body {
     background-color: #86b959;
 }
+
+#map {
+    height: 600px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }

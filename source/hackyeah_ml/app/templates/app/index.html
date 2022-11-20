@@ -3,8 +3,33 @@
 
 {% block body %}
 <div id="main_div">
-    <a href="{% url 'fleet' %}" class="btn btn-secondary btn-lg btn-block">Fleet</a></button>
-    <a href="" class="btn btn-secondary btn-lg btn-block">Hubs/Containers</a></button>
-    <a href="" class="btn btn-secondary btn-lg btn-block">Route</a></button>
+    
+    <div id="map">
+    </div>
+
+    <hr>
+
+    <div class="btn-group mt-3" data-toggle="buttons">
+        <label class="btn btm-sm btn-secondary">
+            <input type="radio" value="Glass" name="options" id="option1"> Glass 
+        </label>
+        <label class="btn btm-sm btn-secondary">
+            <input type="radio" value="Paper" name="options" id="option2"> Paper
+        </label>
+        <label class="btn btm-sm btn-secondary">
+            <input type="radio" value="Plastic"name="options" id="option3"> Plastic
+        </label>
+        <label class="btn btm-sm btn-secondary">
+            <input type="radio" value="Bio" name="options" id="option4"> Bio
+        </label>
+        <label class="btn btm-sm btn-secondary">
+            <input type="radio" value="Mix" name="options" id="option5"> Mix
+        </label>
+        <label class="btn btm-sm btn-success" id="option_submit">
+            Set a route >>
+        </label>
+    </div> 
+
+
 </div>
 {% endblock %}

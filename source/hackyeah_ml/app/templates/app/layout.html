@@ -10,12 +10,27 @@
     <body>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand">hackyeah</a>
+            <a href="{% url 'index' %}" class="navbar-brand">HackYeah2022</a>
+          
+            <div>
+              <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item">
+                        <a href="{% url 'fleet' %}" class="nav-link btn btn-link">Fleet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="btn btn-link nav-link">Hubs/Containers</a>
+                    </li>
+
+              </ul>
+            </div>
           </nav>
         
         <div class="body">
             {% block body %}
             {% endblock %}
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWcsYyZTaKRFQM52LpGJkeBZuoeWT2vYM&callback=initMap" defer>
+            </script>
             <script src="{% static 'app/app.js' %}">
             </script>
         </div>
